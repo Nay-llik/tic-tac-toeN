@@ -567,6 +567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Turn: 0
+  playerOneChecks: 
+  playerTwoChecks: 
 --- !u!4 &377474416
 Transform:
   m_ObjectHideFlags: 0
@@ -926,7 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930497814}
   m_Layer: 0
-  m_Name: cases
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1181,6 +1183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Turn: 0
+  playerOneChecks: 
+  playerTwoChecks: 
 --- !u!224 &1606876306 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7551169160140413007, guid: 3b104429edffbdc468b2bcb1c6a029b2, type: 3}

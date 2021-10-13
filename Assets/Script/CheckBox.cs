@@ -10,7 +10,6 @@ public class CheckBox : MonoBehaviour,IPointerClickHandler
     public Sprite Cross;
     public Sprite Circle;
     public int ID;
-    public int Used;
 
     // Start is called before the first frame update
     void Start()
@@ -19,19 +18,19 @@ public class CheckBox : MonoBehaviour,IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (Game.Turn == gameController.TurnState.PlayerOne && Used==0)
+        if (Game.Turn == gameController.TurnState.PlayerOne)
         {
             GetComponent<Image>().sprite = Cross;
             GetComponent<Image>().color = Color.white;
-            Used = 1;
+            this.enabled = false;
             Game.changeTurn(ID);
         }
-        else if (Game.Turn == gameController.TurnState.PlayerTwo && Used == 0)
+        else if (Game.Turn == gameController.TurnState.PlayerTwo)
         {
             GetComponent<Image>().sprite = Circle;
             GetComponent<Image>().color = Color.white;
             Game.changeTurn(ID);
-            Used = 1;
+            this.enabled = false;
         }
     }
 
