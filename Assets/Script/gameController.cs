@@ -6,6 +6,7 @@ public class gameController : MonoBehaviour
 {
     public GameObject Grid;
     public GameObject Launch;
+    public GameObject End;
     public enum TurnState
     {
         None=0,
@@ -22,6 +23,7 @@ public class gameController : MonoBehaviour
     {
         Grid.gameObject.SetActive(false);
         Launch.gameObject.SetActive(true);
+        End.gameObject.SetActive(false);
         Turn = TurnState.PlayerOne;
     }
     public void displayGrid()
@@ -50,11 +52,13 @@ public class gameController : MonoBehaviour
         {
             Debug.Log("stop le 1 a win en fait");
             Grid.gameObject.SetActive(false);
+            End.gameObject.SetActive(true);
         }
         else if ((playerTwoChecks.Contains(1) && playerTwoChecks.Contains(5) && playerTwoChecks.Contains(9)) || ((playerTwoChecks.Contains(1) && playerTwoChecks.Contains(2) && playerTwoChecks.Contains(3))) || ((playerTwoChecks.Contains(1) && playerTwoChecks.Contains(4) && playerTwoChecks.Contains(7))) || ((playerTwoChecks.Contains(7) && playerTwoChecks.Contains(8) && playerTwoChecks.Contains(9))) || ((playerTwoChecks.Contains(7) && playerTwoChecks.Contains(5) && playerTwoChecks.Contains(3))) || ((playerTwoChecks.Contains(3) && playerTwoChecks.Contains(6) && playerTwoChecks.Contains(9)))||((playerTwoChecks.Contains(4) && playerTwoChecks.Contains(5) && playerTwoChecks.Contains(6))) || ((playerTwoChecks.Contains(2) && playerTwoChecks.Contains(5) && playerTwoChecks.Contains(8))))
         {
             Debug.Log("stop le 2 a win en fait");
             Grid.gameObject.SetActive(false);
+            End.gameObject.SetActive(true);
         }
     }
     // Update is called once per frame
