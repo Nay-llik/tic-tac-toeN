@@ -29,6 +29,7 @@ public class CheckBox : MonoBehaviour,IPointerClickHandler
             GetComponent<Image>().sprite = Circle;
             GetComponent<Image>().color = Color.white;
             Game.changeTurn(ID);
+            //blabla
         }
     }
 
